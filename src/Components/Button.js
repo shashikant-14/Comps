@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 function Button({ children, primary, secondary, success, warning, danger, outline, rounded }) {
   return (
-    <button>
+    <button className='bg-red-500'>
       {children}
     </button>
   )
