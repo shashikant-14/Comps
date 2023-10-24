@@ -2,7 +2,7 @@ import React from 'react';
 // import PropTypes from "prop-types"
 import className from "classnames";
 
-function Button({ children, primary, secondary, success, warning, danger, outline, rounded, ...rest }) {
+function Button({ children, primary, secondary, success, warning, danger, outline, rounded, onClick }) {
   const  classes = className('flex items-center px-3 py-1.5 mx-2 my-2 border',{
     'bg-blue-500 border-blue-600 text-white':primary,
     'bg-gray-500 border-gray-600 text-white':secondary,
@@ -18,7 +18,7 @@ function Button({ children, primary, secondary, success, warning, danger, outlin
     'text-yellow-600':outline && danger,
   });
   return (
-    <button className={classes} {...rest}>
+    <button className={classes} onClick={onClick} onMouseOver={()=>{console.log("Mouse")}}>
       {children}
     </button>
   )
