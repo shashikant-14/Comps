@@ -10,11 +10,11 @@ function Accordion() {
     ]
 
     const handleClick = (index) => {
-        if (expandedIndex === index) {
-            setExpandedIndex(-1);
-        } else {
-            setExpandedIndex(index);
-        }
+        // if (expandedIndex === index) {
+        //     setExpandedIndex(-1);
+        // } else {
+            setExpandedIndex(nextIndex=>nextIndex===index? -1 : index);
+        // }
 
     }
     return (
